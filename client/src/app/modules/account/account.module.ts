@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { AccountRoutingModule } from './account-routing.module';
 import { LoginComponent } from './login/login.component';
-import { MaterialModule } from 'src/app/core/material/material.module';
-import { CoreModule } from 'src/app/core/core.module';
+import { MaterialModule } from 'src/app/shared/material/material.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { CoreModule } from 'src/app/core/core.module';
     CommonModule,
     AccountRoutingModule,
     MaterialModule,
-    CoreModule
+    SharedModule
   ]
 })
 export class AccountModule { }

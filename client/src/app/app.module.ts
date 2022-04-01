@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { DatePipe } from '@angular/common';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,7 @@ import { RoleGuard } from './core/guards/role.guard';
 import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
-import { MaterialModule } from './core/material/material.module';
+import { MaterialModule } from './shared/material/material.module';
 import { AccountService } from './core/services/account.service';
 import { BusyService } from './core/services/busy.service';
 import { LocalStorageService } from './core/services/local-storage.service';
@@ -45,6 +46,7 @@ export function rootLoaderFactory(http: HttpClient)
     BrowserAnimationsModule,
     MaterialModule,
     CoreModule,
+    SharedModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader:{

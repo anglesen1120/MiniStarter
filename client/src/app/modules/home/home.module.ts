@@ -1,9 +1,9 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CoreModule } from 'src/app/core/core.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { MaterialModule } from 'src/app/core/material/material.module';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { MaterialModule } from 'src/app/core/material/material.module';
     CommonModule,
     HomeRoutingModule,
     MaterialModule,
-    CoreModule
+    SharedModule
   ]
 })
 

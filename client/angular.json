@@ -1,7 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "defaultCollection": "@angular-eslint/schematics"
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -24,6 +25,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
+              "apexcharts",
+              "highlight.js",
               "clone-deep",
               "core-js",
               "raf"
@@ -38,9 +41,19 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                  "src/@fuse/styles"
+              ]
+            },
             "styles": [
               "./node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "src/styles.scss"
+              "src/@fuse/styles/tailwind.scss",
+              "src/@fuse/styles/themes.scss",
+              "src/styles/vendors.scss",
+              "src/@fuse/styles/main.scss",
+              "src/styles/styles.scss",
+              "src/styles/tailwind.scss"
             ],
             "scripts": [
               "./node_modules/@fortawesome/fontawesome-free/js/all.js"
